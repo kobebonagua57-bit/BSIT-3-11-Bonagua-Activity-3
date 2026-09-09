@@ -1,0 +1,7 @@
+{
+  "name": "BSIT_3-11_Bonagua",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
