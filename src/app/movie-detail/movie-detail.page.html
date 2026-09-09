@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/featured"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ movie?.title || 'Movie Details' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="page-scroll">
+    @if (movie; as selectedMovie) {
+      <img class="detail-banner" [src]="selectedMovie.banner" [alt]="selectedMovie.title + ' banner'">
+      <div class="detail-copy">
+        <p class="eyebrow">{{ selectedMovie.genre }}</p>
+        <h1>{{ selectedMovie.title }}</h1>
+        <p class="synopsis">{{ selectedMovie.synopsis }}</p>
+        <h2>Movie gallery</h2>
+        <div class="gallery">
+          @for (image of selectedMovie.gallery; track image) {
+            <img [src]="image" [alt]="selectedMovie.title + ' gallery image'">
+          }
+        </div>
+      </div>
+    }
+  </div>
+</ion-content>

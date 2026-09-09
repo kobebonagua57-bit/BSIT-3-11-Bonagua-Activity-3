@@ -1,0 +1,38 @@
+.page-heading {
+	padding: 32px 20px 12px;
+}
+
+.eyebrow {
+	color: #e76f51;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	margin: 0 0 8px;
+}
+
+h1 {
+	color: #14213d;
+	font-family: Georgia, serif;
+	font-size: 36px;
+	margin: 0;
+}
+
+.movie-card {
+	border-radius: 8px;
+	box-shadow: 0 8px 22px rgba(20, 33, 61, 0.12);
+	cursor: pointer;
+	margin: 14px 20px 22px;
+	overflow: hidden;
+}
+
+.movie-card img {
+	aspect-ratio: 16 / 9;
+	display: block;
+	object-fit: cover;
+	width: 100%;
+}
+
+ion-card-title {
+	color: #14213d;
+	font-family: Georgia, serif;
+}

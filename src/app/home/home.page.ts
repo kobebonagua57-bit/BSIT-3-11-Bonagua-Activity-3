@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Movie } from '../attributes/movie';
+import { MovieInfoService } from '../services/movie-info.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,11 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class HomePage {
+  searchResults: Movie[] = [];
 
-  constructor() {}
+  private movieInfoService = inject(MovieInfoService);
 
+  searchMovies(event: CustomEvent): void {
+    this.searchResults = this.movieInfoService.searchMovies(event.detail.value ?? '');
+  }
 }

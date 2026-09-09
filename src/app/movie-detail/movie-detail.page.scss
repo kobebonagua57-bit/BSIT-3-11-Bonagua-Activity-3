@@ -1,0 +1,54 @@
+.detail-banner {
+	aspect-ratio: 16 / 9;
+	display: block;
+	object-fit: cover;
+	width: 100%;
+}
+
+.detail-copy {
+	padding: 28px 22px 40px;
+}
+
+.eyebrow {
+	color: #e76f51;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	margin: 0 0 8px;
+}
+
+h1,
+h2 {
+	color: #14213d;
+	font-family: Georgia, serif;
+}
+
+h1 {
+	font-size: 38px;
+	margin: 0 0 18px;
+}
+
+h2 {
+	font-size: 22px;
+	margin: 30px 0 14px;
+}
+
+.synopsis {
+	color: #5c677d;
+	font-size: 16px;
+	line-height: 1.6;
+	margin: 0;
+}
+
+.gallery {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery img {
+	aspect-ratio: 1.35;
+	border-radius: 6px;
+	object-fit: cover;
+	width: 100%;
+}

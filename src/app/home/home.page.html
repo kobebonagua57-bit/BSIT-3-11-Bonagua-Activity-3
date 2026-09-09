@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Movie Night</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="page-scroll">
+    <div class="intro">
+      <p class="eyebrow">YOUR NEXT FAVORITE</p>
+      <h1>Find a story<br>worth watching.</h1>
+      <p class="description">Search the collection and discover something for tonight.</p>
+    </div>
+    <ion-searchbar placeholder="Search Movie" (ionInput)="searchMovies($event)" animated="true"></ion-searchbar>
+    @if (searchResults.length) {
+      <ion-list class="results">
+        <ion-list-header>Matching movies</ion-list-header>
+        @for (movie of searchResults; track movie.id) {
+          <ion-item lines="in">
+            <ion-icon name="film-outline" slot="start"></ion-icon>
+            <ion-label>{{ movie.title }}</ion-label>
+            <ion-note slot="end">{{ movie.genre }}</ion-note>
+          </ion-item>
+        }
+      </ion-list>
+    }
   </div>
 </ion-content>
